@@ -1,0 +1,706 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+html {
+
+-webkit-font-smoothing: antialiased !important;
+}
+
+body {
+  padding-top: 0px;
+ background-color:rgba(0,0,0,0.8);
+}
+
+#splashscreen {
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    width:100%;
+	background:url(../img/splash.png) no-repeat center center;
+	background-size:cover;
+	z-index: 9999;
+	padding-top: 3%;
+	text-align: center;
+}
+
+#splashscreen h1 {
+	font-family: 'globalmedium_stencil', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 2.8em;
+	color: white;
+}
+
+#splashscreen p {
+	font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
+	font-size: 1.3em;
+	color: white;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 2%;
+}
+
+#splashscreen a{
+	font-family: 'globalmedium_stencil', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 2em;
+	color: white;
+	background: #ff3d58;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+#splashscreen a:hover {
+	text-decoration: none;
+	color: #ff3d58;
+	background: white;
+	-webkit-transition: background-color 500ms ease-out 50ms;
+    -moz-transition: background-color 500ms ease-out 50ms;
+    -o-transition: background-color 500ms ease-out 50ms;
+    transition: background-color 500ms ease-out 50ms;
+}
+
+#splashsearch {
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    width:100%;
+	background:url(../img/splash.png) no-repeat center center;
+	background-size:cover;
+	z-index: 9998;
+	padding-top: 3%;
+	text-align: center;
+}
+
+#splashsearch h1 {
+	font-family: 'globalmedium_stencil', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 2.8em;
+	color: white;
+}
+
+#splashsearch p {
+	clear: both;
+	font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
+	font-size: 1em;
+	color: white;
+	padding-top: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 2%;
+}
+
+#splashsearch a{
+	font-family: 'globalmedium_stencil', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 2em;
+	color: white;
+	background: #ff3d58;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+#splashsearch a:hover {
+	text-decoration: none;
+	color: #ff3d58;
+	background: white;
+	-webkit-transition: background-color 500ms ease-out 50ms;
+    -moz-transition: background-color 500ms ease-out 50ms;
+    -o-transition: background-color 500ms ease-out 50ms;
+    transition: background-color 500ms ease-out 50ms;
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+	float: left;
+	width: 25%;
+    display: block;
+    padding-left: 20px;
+	padding-right: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #ff3d58;
+    
+  }
+}
+
+/* Sidebar navigation */
+
+.nav-sidebar {
+  margin-right: -20px; /* 20px padding + 1px border */
+ 
+  margin-left: -20px;
+}
+
+.nav-sidebar > h1 {
+	display: none;
+}
+
+.nav-sidebar > ul {
+	display: none;
+}
+
+.nav-sidebar > .trend {
+	display: none;
+}
+
+@media (min-width: 768px) {
+
+.nav-sidebar > .trend {
+	display: block;
+	-moz-column-count: 2;
+ 
+    -webkit-column-count: 2;
+	column-gap: 0;
+    column-count: 2;
+
+	margin: 0 auto;
+	width: 100%;
+	font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
+	font-size: 1.1em;
+	color: white;
+}
+
+.nav-sidebar > .trend > div > a {
+	color: #fff;
+  padding: 5%;
+}
+
+.nav-sidebar > .trend > div > a:hover {
+	color: #ff3d58;
+  background-color: #fff;
+  -webkit-transition: background-color 200ms ease-out 50ms;
+    -moz-transition: background-color 200ms ease-out 50ms;
+    -o-transition: background-color 200ms ease-out 50ms;
+    transition: background-color 200ms ease-out 50ms;
+}
+
+.nav-sidebar > .trend > div {
+	padding:5%;
+	
+}
+
+.nav-sidebar > .trend > div:before {
+	content: '#';
+	padding-left: 5%;
+}
+
+.nav-sidebar > h1 {
+	display: block;
+	color: #fff;
+	font-family: 'globalmedium_stencil', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 2em;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 5%;
+}
+
+.nav-sidebar > ul {
+	list-style-type: none;
+	display: block;
+	-moz-column-count: 2;
+ 
+    -webkit-column-count: 2;
+	column-gap: 0;
+    column-count: 2;
+
+	padding: 0;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.nav-sidebar > ul > li {
+  font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
+  font-size: 1.1em;
+  color: #fff;
+  padding: 5%;
+
+}
+
+.nav-sidebar > ul > li:before {
+	content: '#';
+	padding-left: 5%;
+}
+
+.nav-sidebar > ul > li > a {
+  color: #fff;
+  padding: 5%;
+}
+
+.nav-sidebar > ul > li > a:hover {
+  color: #ff3d58;
+  background-color: #fff;
+  -webkit-transition: background-color 200ms ease-out 50ms;
+    -moz-transition: background-color 200ms ease-out 50ms;
+    -o-transition: background-color 200ms ease-out 50ms;
+    transition: background-color 200ms ease-out 50ms;
+}
+
+.nav-sidebar > .active > a {
+  color: #ff3d58;
+  background-color: #fff;
+}
+}
+
+.nav-sidebar img{
+	display: block;
+	width: 208px;
+	margin: 0 auto;
+	margin-bottom: 1%;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+
+.reverse_link {
+	float: right;
+	font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 2em;
+	color: white;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 2%;
+	padding-right: 2%;
+	cursor: pointer;
+	background: #c12f44;
+}
+
+.reverse_link:hover{
+	color: #c12f44;
+	background: white;
+	text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .main {
+	color: #fff;
+	width:75%;
+ 	float: right;
+    padding-right: 40px;
+    padding-left: 40px;
+	padding: 20px;
+  }
+  .reverse_link {
+	float: right;
+	font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 2em;
+	color: white;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 2%;
+	padding-right: 2%;
+	cursor: pointer;
+	background: #c12f44;
+}
+
+.reverse_link:hover{
+	color: #c12f44;
+	background: white;
+	text-decoration: none;
+}
+}
+.main .page-header {
+  margin-top: 0;
+  color: white;
+  border: none;
+  font-family: 'globalmedium_stencil', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+
+a.btn {
+	font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 1.5em;
+	background: white;
+	margin-bottom: 4%;
+}
+
+a.btn:hover {
+	color: white;
+	background: #6592cc;
+}
+
+
+
+.navbar-fixed-top {
+	background: transparent;
+	border: none;
+}
+
+/*.navbar-fixed-top {
+	background: transparent;
+	border: none;
+}
+
+.navbar-fixed-top .navbar-toggle {
+	background: #ff3d58;
+	border: none;
+}
+
+.navbar-collapse {
+	background: #6592cc;
+}
+
+.navbar-toggle:hover {
+	background: #6592cc;
+}*/
+
+.navbar {
+		
+	}
+
+@media (min-width: 768px) {
+	.navbar {
+		display: none;
+	}
+}
+
+/* Search bar properties */
+
+@media (min-width: 768px) {
+  .navbar-form {
+	 display: none; 
+  }
+
+}
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+
+/*small { display: block; color: #555; padding: 10px 0px; }
+
+#w { margin: 0 auto; width: 960px; }
+
+#sform { margin: 0 auto; width: 100%; padding-left: 5%; padding-right: 5%;}
+#sform #s { 
+padding: 5px 6px; 
+color: #999; 
+width: 100%; 
+border: 1px solid #ddd; 
+font-size: 1.2em; */
+/* icon source: http://modmyi.com/forums/iphone-4-new-skins-themes-launches/723225-buuf-iphone-4-a-398.html#post6275581 */
+/*background: url('../img/instacam.png') 6px 7px no-repeat;*/
+/*transition: box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+-webkit-transition: box-shadow 0.25s linear 0s, color 0.15s linear 0s;
+-moz-transition: box-shadow 0.25s linear 0s, color 0.15s linear 0s;
+-o-transition: box-shadow 0.25s linear 0s, color 0.15s linear 0s;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset; 
+font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
+}*/
+
+
+#search {
+  height: 40px;
+  padding-top: 1%;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 100;
+  top: 0;
+  border-radius:0 0 5px 5px;
+}
+
+#search input {
+	width: 80%;
+	display: inline;
+	font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
+	font-size: 1.2em;
+	color: #ff3d58;
+	padding: 1%;
+	margin: auto;
+}
+
+#search .btn{
+	font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 1em;
+	background: #ff3d58;
+	color: white;
+	border-radius: 0px;
+	padding-top: 0.7%;
+	padding-bottom: 0.7%;
+	padding-left: 2%;
+	padding-right: 2%;
+	border: 1px solid white;
+}
+
+.search-wrap {
+  background: white;
+  line-height: 30px;
+  height: 30px;
+  text-align: left;
+  border-radius: 3px;
+  width: 100%;
+  margin: 0;
+  border: 1px solid #ddd;
+}
+
+#search2 {
+  height: 40px;
+  padding-top: 2%;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  z-index: 100;
+  top: 0;
+  border-radius:0 0 5px 5px;
+}
+
+#search2 input {
+	
+	width: 88%;
+	font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
+	font-size: 1.2em;
+	color: #ff3d58;
+	padding: 1%;
+	display: block;
+	float: left;
+}
+
+#search2 .btn{
+	float: left;
+	font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 1.5em;
+	background: #ff3d58;
+	color: white;
+	border-radius: 0px;
+	padding-top: 0.7%;
+	padding-bottom: 0.7%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+
+#photos-wrap {
+  width: 100%;
+  padding: 0;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+#photos-wrap .photo  {
+	display: inline-block;
+  margin-right: 1.7%;
+  margin-bottom: 2%;
+  position: relative;
+  width: 47.3%;
+}
+
+
+@media (min-width: 768px) {
+#photos-wrap .photo  {
+  display: inline-block;
+  margin-right: 1.7%;
+  margin-bottom: 2%;
+  position: relative;
+  width: 22%;
+  height: 22%;
+}
+
+}
+
+#photos-wrap .photo:hover {
+	background: url(../img/entryhov.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.photo img {
+	width: 100%;
+	background: transparent;
+	padding: 0;
+}
+
+.photo span{
+	color: black;
+}
+
+.photo .likes {
+  display: none;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  padding: 0 5px 0 10px;
+  color: #00baff;
+  font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 16px;
+  /*border-radius: 2px;*/
+  /*border: 1px solid #ddd;*/
+ /* background: white url('../img/fav.png') no-repeat 2px 0;*/
+}
+
+.photo:hover .likes {
+	display: block;
+}
+
+.photo .comments {
+	display: none;
+	height: 16px;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  padding: 0 10px 0 5px;
+  color: #00baff;
+  font-family: 'quarklight', Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 16px;
+}
+
+.photo:hover .comments {
+	display: block;
+}
+
+/*.photo .avatar {
+	display: none;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  position: absolute;
+  bottom: 11px;
+  right: 8px;
+  background: white;
+}*/
+
+.avatar {
+	display: block;
+	width: 25%;
+	padding-bottom: 5%;
+}
+
+.photo:hover .avatar {
+	display: block;
+}
+
+#photos-wrap .photo a {
+	
+}
+
+#photos-wrap .photo a:hover {
+    opacity: 1;
+}
+
+#photos-wrap .photo a:hover img:hover {
+    -webkit-opacity: 0.2;
+    opacity: 0.2;
+		-webkit-transition: opacity 200ms ease-in;
+       -moz-transition: opacity 200ms ease-in;
+        -ms-transition: opacity 200ms ease-in;
+         -o-transition: opacity 200ms ease-in;
+            transition: opacity 200ms ease-in;
+}
+
+.paginate {
+  display: block;
+  clear: both;
+  margin: 10px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  height: 100px;
+}
+
+
+/*#sform #s:focus { 
+color: #767676;
+border-color: #c5d7ee;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(170, 200, 240, 0.9);
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(170, 200, 240, 0.9);
+-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(170, 200, 240, 0.9);
+}
+
+#sform #s.loading { 
+	background: url('../img/loader.gif') 10px 7px no-repeat;
+}
+
+#photos { margin-left: 100px; text-align: center; clear: both;}
+#photos .p { float: left; width: 170px; display: inline-block;  margin-right: 20px; margin-bottom: 12px; }
+
+#photos .p img { border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; }
+
+#photos .p .fullsize { width: 32px; height: 32px; display: block; margin-left: 70px; margin-bottom: 5px; }*/
+
+
+
+@font-face {
+    font-family: 'globalmedium_stencil';
+    src: url('../fonts/Global%20Medium%20Stencil/Webfonts/global_mediumstencil_macroman/Global-MediumStencil-webfont.eot');
+    src: url('../fonts/Global%20Medium%20Stencil/Webfonts/global_mediumstencil_macroman/Global-MediumStencil-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Global%20Medium%20Stencil/Webfonts/global_mediumstencil_macroman/Global-MediumStencil-webfont.woff') format('woff'),
+         url('../fonts/Global%20Medium%20Stencil/Webfonts/global_mediumstencil_macroman/Global-MediumStencil-webfont.ttf') format('truetype'),
+         url('../fonts/Global%20Medium%20Stencil/Webfonts/global_mediumstencil_macroman/Global-MediumStencil-webfont.svg#globalmedium_stencil') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'quarkbold';
+    src: url('../fonts/Quark-webfont/quark-bold-webfont.eot');
+    src: url('../fonts/Quark-webfont/quark-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Quark-webfont/quark-bold-webfont.woff') format('woff'),
+         url('../fonts/Quark-webfont/quark-bold-webfont.ttf') format('truetype'),
+         url('../fonts/Quark-webfont/quark-bold-webfont.svg#quarkbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'quarklight';
+    src: url('../fonts/Quark-webfont/quark-light-webfont.eot');
+    src: url('../fonts/Quark-webfont/quark-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Quark-webfont/quark-light-webfont.woff') format('woff'),
+         url('../fonts/Quark-webfont/quark-light-webfont.ttf') format('truetype'),
+         url('../fonts/Quark-webfont/quark-light-webfont.svg#quarklight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

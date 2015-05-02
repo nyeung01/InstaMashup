@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Needs a name...</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+   
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div id="splashscreen">
+   
+        <img src="img/logodisp.svg" />
+            <h1>It's Just Another Site...</h1>
+            <p>Or is it? Why don't you come in and explore what this site can do? Don't worry, we won't bite.</p>
+            <a href="#" class="enter_link">
+            Enter
+            </a>
+ 
+    </div>
+    <div id="splashsearch">
+   		
+        <img src="img/logodisp.svg" />
+        <form id='search2'>
+            <div class="input-append">
+            <input class='search-tag' type='text' tabindex='1' placeholder='Enter a tag...' />
+            <button class="btn" id="search-button" dir="ltr" tabindex="2" type="submit">Search</button>
+          </div>
+ 		</form>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+         		<img src="img/logodisp.svg" />
+       
+        <form id='search'>
+          <div class="input-append">
+            <input class='search-tag' type='text' tabindex='1' placeholder='Enter a tag...' />
+            <button class="btn" id="search-button" dir="ltr" tabindex="2" type="submit" value="Go">
+         
+            </button>
+          </div>
+        </form>
+
+   
+		
+          </ul>
+          <div class="nav nav-sidebar">
+          
+          	<h1>Trending</h1> 
+             
+          	<div class="trend">
+                <div id = "myDiv0" style="display:none"><a href="#eiffeltower" class="yourLink">eiffeltower</a></div>
+                <div id = "myDiv1" style="display:none"><a href="#statueliberty" class="yourLink">statueliberty</a></div>
+                <div id = "myDiv2" style="display:none"><a href="#greatwall" class="yourLink">greatwall</a></div>
+                <div id = "myDiv3" style="display:none"><a href="#pyramid" class="yourLink">pyramid</a></div>
+                <div id = "myDiv4" style="display:none"><a href="#freedomtower" class="yourLink">freedomtower</a></div>
+                <div id = "myDiv5" style="display:none"><a href="#memorial" class="yourLink">memorial</a></div>
+                <div id = "myDiv6" style="display:none"><a href="#temple" class="yourLink">temple</a></div>
+                <div id = "myDiv7" style="display:none"><a href="#palace" class="yourLink">palace</a></div>
+                <div id = "myDiv8" style="display:none"><a href="#garden" class="yourLink">garden</a></div>
+                <div id = "myDiv9" style="display:none"><a href="#museum" class="yourLink">museum</a></div>
+                <div id = "myDiv10" style="display:none"><a href="#church" class="yourLink">church</a></div>
+                <div id = "myDiv11" style="display:none"><a href="#moai" class="yourLink">moai</a></div>
+                <div id = "myDiv12" style="display:none"><a href="#monument" class="yourLink">monument</a></div>
+                <div id = "myDiv13" style="display:none"><a href="#lighthouse" class="yourLink">lighthouse</a></div>
+                <div id = "myDiv14" style="display:none"><a href="#mosque" class="yourLink">mosque</a></div>
+                <div id = "myDiv15" style="display:none"><a href="#fort" class="yourLink">fort</a></div>
+            </div>
+                <script type = "text/javascript">
+                
+                var numberOfDivs = 16; // or however many
+                
+                window.onload = function() {
+                var list = [];
+                for (var i = 0; i < numberOfDivs; i++) {
+                list [i] = i;
+                }
+                shuffle(list);
+                
+                for (var i = 0; i < 10; i++) {  // show 4 out of 7
+                document.getElementById(["myDiv"+ list[i]]).style.display="block";
+                }
+                }
+                
+                shuffle = function(v){
+                for(var j, x, i = v.length; i; j = parseInt(Math.random() * i), x = v[--i], v[i] = v[j], v[j] = x);
+                return v;
+                }
+				
+                </script>
+           
+          </div>
+          <div class="nav nav-sidebar">
+          	<h1>Most Rated</h1>
+          	<ul>
+                <li><a href="">sample</a></li>
+                <li><a href="">sample</a></li>
+                <li><a href="">sample</a></li>
+                <li><a href="">sample</a></li>
+                <li><a href="">sample</a></li>
+                <li><a href="">sample</a></li>
+                <li><a href="">sample</a></li>
+                <li><a href="">sample</a></li>
+                <li><a href="">sample</a></li>
+                <li><a href="">sample</a></li>
+         	</ul>
+          </div>
+          
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Search </h1>
+            <div id='photos-wrap'></div>
+            
+            <div class='paginate'>
+              <a class='btn'  style='display:none;' data-max-tag-id='' href='#'>View More</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/application.js' type='text/javascript' charset='utf-8'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js'></script>
+   
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "ur-7957af2-87a7-2408-5269-db75628d3a14"});</script>
+
+<script type='text/javascript'>
+$('.enter_link').click(function () {
+    $(this).parent('#splashscreen').fadeOut(500);
+	$('#search2').on('submit', function(e){
+
+		$(this).parent('#splashsearch').fadeOut(0);
+    });
+});
+
+	function buildShareThis(url){
+ var customShareThis  = "<p>"; // class for styling maybe
+     customShareThis += "<span class='st_facebook_hcount' displayText='Facebook' st_url='"+url+"'></span> ";
+     customShareThis += "<span class='st_twitter_hcount' displayText='Tweet' st_url='"+url+"'></span>";
+	 customShareThis += "</p>";
+     return customShareThis;
+}
+
+$(document).ready(function() {
+		$('.fancybox').fancybox({
+			aspectRatio : true,
+			autoSize : false,
+			margin:[20, 250, 10, 25],  
+			beforeShow: function() {
+     var caption =  $(this.element).data("caption") ? $(this.element).data("caption") : "";
+     this.title = this.title ? this.title + buildShareThis(this.href) + caption : buildShareThis(this.href) + caption;
+  },
+			afterShow: function(){
+     stButtons.locateElements();
+  },
+  
+		 openEffect  : 'none',
+		 closeEffect : 'none',
+		 helpers : {
+		  title : {
+		   type : 'outside'
+		  }
+		 },
+		 
+		 
+		});
+		
+});
+
+	</script>
+    
+    
+	<script type="text/template" id="photo-template">
+	  <div class='photo'>
+		<a href='<%= photo %>' class="fancybox" rel="gallery1" title="<p>Submitted by <%= user %></p><p><%= caption %></p>">
+		
+		  <img class='main img-responsive' src='<%= photo %>'  style='display:none;' onload='Instagram.App.showPhoto(this);' alt='<%= url %>' />
+		</a>
+		<img class='avatar' width='40' height='40' src='<%= avatar %>' />
+		<span class='heart'><strong><%= count %></strong></span>
+	  </div>
+  </script>
+    <!--<script type="text/javascript" src="ajax.js"></script>-->
+  </body>
+</html>
